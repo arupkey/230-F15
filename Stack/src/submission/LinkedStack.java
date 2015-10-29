@@ -1,37 +1,39 @@
 package submission;
 
 import adt.Stack;
+//import src.LinkedStack;
 
 public class LinkedStack<T> implements Stack<T> {
 	private Node top;
 	
 	@Override
 	public void push(T newEntry) {
-		// TODO Auto-generated method stub
-		
+		top=new Node(newEntry, top);
 	}
 
 	@Override
 	public T pop() {
-		// TODO Auto-generated method stub
-		return null;
+		T entry=top.data;
+		top=top.next;
+		return entry;
 	}
 
 	@Override
 	public T peek() {
-		// TODO Auto-generated method stub
-		return null;
+		if (isEmpty())
+			return null;
+		else
+			return top.data;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return top==null;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
+		top=null;
 		
 	}
 	
@@ -60,4 +62,30 @@ public class LinkedStack<T> implements Stack<T> {
 		} // end constructor
 	} // end Node
 
+	public static void main(String[] args) {
+		LinkedStack s =new LinkedStack();
+		System.out.println(s);
+		s.push("Nikita");
+		System.out.println(s);
+		s.push("Alexandra");
+		System.out.println(s);
+		s.push("Emily");
+		System.out.println(s);
+		s.push("Andrew");
+		System.out.println(s);
+		s.push("Nate");
+		System.out.println(s);
+		s.push(s.peek());
+		System.out.println(s);
+		s.pop();
+		System.out.println(s);
+		s.pop();
+		System.out.println(s);
+		s.pop();
+		System.out.println(s);
+		s.pop();
+		System.out.println(s);
+		s.clear();
+		System.out.println(s);
+}
 }
