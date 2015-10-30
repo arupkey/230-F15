@@ -2,7 +2,7 @@ package submission;
 
 public class Palindrome<T> {
 	public char[] array;
-	public T[] reversearray;
+	
 	
 	public boolean isPalindrome(String s) {
 		array=s.toCharArray();
