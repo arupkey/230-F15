@@ -6,9 +6,9 @@ import adt.Stack;
 //import src.ArrayStack;
 
 public class ArrayStack<T> implements Stack<T> {
-	private T[] data;
+	private T[] data=(T[])new Object[20];
 	private int top=-1;
-	public static final int DEFAULT_CAPACITY =20;
+	
 	
 	@Override
 	public void push(T newEntry) {
@@ -45,7 +45,7 @@ public class ArrayStack<T> implements Stack<T> {
 
 	@Override
 	public void clear() {
-		while (data[top]!=null){
+		while (top!=-1){
 			T pop;
 		}
 		
@@ -84,6 +84,7 @@ public class ArrayStack<T> implements Stack<T> {
 		System.out.println(s);
 		s.clear();
 		System.out.println(s);
-
+		s.push("Andrew");
+		System.out.println(s);
 	}
 }

@@ -87,5 +87,9 @@ public class LinkedStack<T> implements Stack<T> {
 		System.out.println(s);
 		s.clear();
 		System.out.println(s);
+		s.push("Nikita");
+		s.push("Alexandra");
+		s.push("Emily");
+		System.out.println(s);
 }
 }
