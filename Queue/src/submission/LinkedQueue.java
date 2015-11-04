@@ -7,32 +7,35 @@ public class LinkedQueue<T> implements Queue<T> {
 	
 	@Override
 	public void enqueue(T newEntry) {
-		// TODO Auto-generated method stub
-		
+		Node newNode= new Node (newEntry, null);
+		if (isEmpty())
+			head=newNode;
+		else
+			tail.next=newNode;
+		tail=newNode;
 	}
 
 	@Override
 	public T dequeue() {
-		// TODO Auto-generated method stub
-		return null;
+		T removal=head.data;
+		head=head.next;
+		return removal;
 	}
 
 	@Override
 	public T peek() {
-		// TODO Auto-generated method stub
-		return null;
+		return head.data;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return head==null && tail==null;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		head=null;
+		tail=null;
 	}
 	
 	public String toString() {
@@ -60,4 +63,27 @@ public class LinkedQueue<T> implements Queue<T> {
 		} // end constructor
 	} // end Node
 
+	public static void main (String args[]){
+		LinkedQueue q=new LinkedQueue();
+		//Question!!! can't print empty queue, won't print if nothing there
+		q.enqueue("Andrew");
+		System.out.println(q);
+		q.enqueue("Emily");
+		System.out.println(q);
+		q.enqueue("Nate");
+		System.out.println(q);
+		q.enqueue("Alexandra");
+		System.out.println(q);
+		q.enqueue("Vishnu");
+		System.out.println(q);
+		q.dequeue();
+		System.out.println(q);
+		q.dequeue();
+		System.out.println(q);
+		System.out.println(q.isEmpty());
+		q.clear();
+		//question!!! can't have print statement directly after clear, but still clears, but can't print cleared
+		q.enqueue("CSCI230");
+		System.out.println(q);
+	}
 }
