@@ -5,7 +5,7 @@ import adt.Queue;
 public class ArrayQueue<T> implements Queue<T> {
 	private T[] data=(T[]) new Object[5];
 	private int head=0;
-	private int tail=(5-1);
+	private int tail=-1;
 	
 	@Override
 	public void enqueue(T newEntry) {
@@ -65,7 +65,7 @@ public class ArrayQueue<T> implements Queue<T> {
 		System.out.println(q.isEmpty());
 		q.enqueue("Robert");
 		System.out.println(q);
-		q.enqueue("Hola");
+		q.enqueue("Hala");
 		q.clear();
 		System.out.println(q);
 		q.enqueue("CSCI230");
