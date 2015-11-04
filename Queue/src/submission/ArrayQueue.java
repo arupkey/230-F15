@@ -3,37 +3,38 @@ package submission;
 import adt.Queue;
 
 public class ArrayQueue<T> implements Queue<T> {
-	private T[] data;
-	private int head, tail;
+	private T[] data=(T[]) new Object[5];
+	private int head=0;
+	private int tail=(5-1);
 	
 	@Override
 	public void enqueue(T newEntry) {
-		// TODO Auto-generated method stub
-		
+		tail=(tail+1)% data.length;
+		data[tail]=newEntry;
 	}
 
 	@Override
 	public T dequeue() {
-		// TODO Auto-generated method stub
-		return null;
+		T removed=data[head];
+		data[head]=null;
+		head=(head+1)%data.length;
+		return removed;
 	}
 
 	@Override
 	public T peek() {
-		// TODO Auto-generated method stub
-		return null;
+		return data[head];
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return head ==((tail+1)%data.length);
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		head=0;
+		tail=(data.length-1);
 	}
 	
 	public String toString() {
@@ -43,5 +44,31 @@ public class ArrayQueue<T> implements Queue<T> {
 		s+= "\n";
 		return s;
 	}
-
+	
+	public static void main(String args[]){
+		ArrayQueue q=new ArrayQueue();
+		//System.out.println(q);
+		q.enqueue("Andrew");
+		System.out.println(q);
+		q.enqueue("Emily");
+		System.out.println(q);
+		q.enqueue("Nate");
+		System.out.println(q);
+		q.enqueue("Alexandra");
+		System.out.println(q);
+		q.enqueue("Vishnu");
+		System.out.println(q);
+		q.dequeue();
+		System.out.println(q);
+		q.dequeue();
+		System.out.println(q);
+		System.out.println(q.isEmpty());
+		q.enqueue("Robert");
+		System.out.println(q);
+		q.enqueue("Hola");
+		q.clear();
+		System.out.println(q);
+		q.enqueue("CSCI230");
+		System.out.println(q);
+	}
 }
