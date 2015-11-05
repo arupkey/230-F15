@@ -28,6 +28,8 @@ public class ArrayQueue<T> implements Queue<T> {
 
 	@Override
 	public T dequeue() {
+		if (isEmpty())
+			return null;
 		T removed=data[head];
 		data[head]=null;
 		head=(head+1)%data.length;

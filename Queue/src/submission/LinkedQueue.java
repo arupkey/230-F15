@@ -17,6 +17,8 @@ public class LinkedQueue<T> implements Queue<T> {
 
 	@Override
 	public T dequeue() {
+		if(isEmpty())
+			return null;
 		T removal=head.data;
 		head=head.next;
 		return removal;
