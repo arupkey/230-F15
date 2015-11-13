@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry kind="src" path="Bag/src"/>
 	<classpathentry kind="src" path="BigO/src"/>
 	<classpathentry kind="src" path="Queue/src"/>
 	<classpathentry kind="src" path="Shapes/src"/>
 	<classpathentry kind="src" path="Stack/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+=======
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+>>>>>>> 123eaf471d107f44e16694ec186aff6c283ea1bd
 	<classpathentry kind="output" path="bin"/>
 </classpath>
