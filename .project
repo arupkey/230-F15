@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>230-F15 AKN1</name>
+=======
+	<name>DrewNote</name>
+>>>>>>> 123eaf471d107f44e16694ec186aff6c283ea1bd
 	<comment></comment>
 	<projects>
 	</projects>
@@ -10,6 +14,7 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+<<<<<<< HEAD
 		<buildCommand>
 			<name>org.eclipse.pde.ManifestBuilder</name>
 			<arguments>
@@ -23,6 +28,10 @@
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.pde.PluginNature</nature>
+=======
+	</buildSpec>
+	<natures>
+>>>>>>> 123eaf471d107f44e16694ec186aff6c283ea1bd
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
