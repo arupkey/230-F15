@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .metadata
 .recommenders
 *.class
@@ -8,3 +9,6 @@ MyPalindrome.java
 MyArrayQueue.java
 MyLinkedQueue.java
 /bin/
+=======
+*.class
+>>>>>>> 123eaf471d107f44e16694ec186aff6c283ea1bd
