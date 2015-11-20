@@ -1,15 +1,20 @@
 package submission;
 
 public class RecursiveInsertionSorter {
+	
 	public static int[] sort(int[] unsorted) {
-		int last=unsorted.length-1;
-		if(unsorted[0]<unsorted[last]){
-			last-=last;
-			sort(unsorted);
-			insertinOrder(unsorted[last],unsorted,unsorted[0],unsorted[last-1]);
-	}
+			sorter(unsorted,0,unsorted.length-1);
+			return unsorted;
+}
+	
+	public static int[] sorter(int[]unsorted, int first, int last){
+		if(first<last){
+			sorter(unsorted,first,last-1);
+			insertinOrder(unsorted[last],unsorted,first,last-1);
+	}	
 		return unsorted;
 	}
+	
 	public static int[] insertinOrder(int entry, int[]unsorted, int begin, int end){
 		if(entry>=unsorted[end]){
 			unsorted[end+1]=entry;
