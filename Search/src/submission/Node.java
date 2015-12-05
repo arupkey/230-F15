@@ -11,7 +11,23 @@ public class Node {
 		
 		public Node(int i, Node nextNode)
 		{
-			num = i;
-			next = nextNode;	
+			setNum(i);
+			setNext(nextNode);	
 		} // end constructor
+
+		public int getNum() {
+			return num;
+		}
+
+		public void setNum(int num) {
+			this.num = num;
+		}
+
+		public Node getNext() {
+			return next;
+		}
+
+		public void setNext(Node next) {
+			this.next = next;
+		}
 }
