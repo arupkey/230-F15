@@ -24,10 +24,13 @@ public class ArrayStack<T> implements Stack<T> {
 
 	@Override
 	public T pop() {
+		if(!isEmpty()){
 		T entry=data[top];	
 		data[top]=null;
 		top--;
 		return entry;
+		}
+		return null;
 	}
 
 	@Override
@@ -45,7 +48,7 @@ public class ArrayStack<T> implements Stack<T> {
 
 	@Override
 	public void clear() {
-		while (top!=-1){
+		while (!isEmpty()){
 			T pop;
 		}
 		
