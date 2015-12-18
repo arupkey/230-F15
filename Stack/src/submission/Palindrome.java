@@ -1,15 +1,19 @@
 package submission;
 
+import java.util.Arrays;
+
 public class Palindrome<T> {
 	public char[] array;
 	
 	public static boolean isPalindrome(String s){
-		char[] array=s.toCharArray();
-		int last=array.length-1;
-		for (int i=0; i<array.length; i++){
-			if (array[i]==array[(last-i)]){
+		char[] forwards=s.toCharArray();
+		int size=forwards.length;
+		char[] backwards=Arrays.copyOfRange(forwards, 0, size);
+		for (int i=0; i<size; i++){
+			if (forwards[i]==backwards[(size-1-i)]){
 				return true;
 			}
+			return false;
 		}
 		return false;
 	}

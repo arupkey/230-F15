@@ -49,7 +49,7 @@ public class ArrayStack<T> implements Stack<T> {
 	@Override
 	public void clear() {
 		while (!isEmpty()){
-			T pop;
+			pop();
 		}
 		
 	}
